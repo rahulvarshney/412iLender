@@ -2,12 +2,18 @@ import {
   teams,
   players,
   generateArticle,
-  generateTeamsArticles
+  generateTeamsArticles,
+  specialists,
+  firms
 } from './dummy-data'
 
 let cachedPlayers = null
 let cachedTeams = {}
 let cachedTeamNames = null
+
+let cachedSpecialists = null
+let cachedFirms = {}
+let cachedFirmNames = null
 
 export function getPlayers (teamId) {
   return new Promise((res) => {
@@ -17,6 +23,18 @@ export function getPlayers (teamId) {
     }
 
     return res(teamId ? teams[teamId].players : cachedPlayers)
+  })
+}
+
+export function getSpecialists (firmId) {
+  return new Promise((res) => {
+    if (cachedSpecialists === null) {
+      cachedSpecialists = specialists
+      return setTimeout(() => res(firmId ? firms[firmId].specialists : cachedSpecialists), 800
+        )
+    }
+
+    return res(firmId ? firms[firmId].specialists : cachedSpecialists)
   })
 }
 
