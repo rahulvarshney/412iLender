@@ -14,6 +14,7 @@ let cachedTeamNames = null
 let cachedSpecialists = null
 let cachedFirms = {}
 let cachedFirmNames = null
+let cachedSpecialist = null
 
 export function getPlayers (teamId) {
   return new Promise((res) => {
@@ -69,5 +70,11 @@ export function getArticle (teamId, id) {
 export function getTeamsArticles (teamId) {
   return new Promise((res) => {
     setTimeout(() => res(generateTeamsArticles(teamId)), 700)
+  })
+}
+
+export function getSpecialist () {
+  return new Promise((res) => {
+    setTimeout(() => res('Ash Singh 2'), 700)
   })
 }
