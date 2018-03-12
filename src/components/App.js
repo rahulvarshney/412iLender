@@ -14,13 +14,14 @@ import LoanCalculators from './LoanCalculators'
 import Quote from './Quote'
 import Testimonials from './Testimonials'
 import Glossary from './Glossary'
+import Sidebar from './Sidebar'
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <Navbar />
+          <Sidebar />
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/players' component={Players} />

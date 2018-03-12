@@ -1,23 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, Route } from 'react-router-dom'
-import slug from 'slug'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-/*Sidebar.propTypes = {
-  title: PropTypes.string.isRequired,
-  list: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired
+export default function Sidebar () {
+  return (
+    <div className='sidebar-list'>
+      <Link to='/'>Home</Link>
+      <nav className='nav-links'>
+        <Link to='/players'>Players</Link>
+        <Link to='/teams'>Teams</Link>
+        <Link to='/contact'>Contact</Link>
+        <Link to='/loan/application'>Loan Application</Link>
+        <Link to='/loan/disclosures'>Loan Disclosures</Link>
+        <Link to='/appointment'>Appointment</Link>
+        <Link to='/directions'>Directions</Link>
+        <Link to='/loan/info'>Loan Info</Link>
+        <Link to='/loan/calculators'>Loan Calculators</Link>
+        <Link to='/quote'>Rate Quote</Link>
+        <Link to='/testimonials'>Client Testimonials</Link>
+        <Link to='/glossary'>Finance Glossary</Link>
+      </nav>
+    </div>
+  )
 }
-
-export default function Sidebar ({ title, list, loading, location, match }) {
-  return loading === true
-    ? <h1>LOADING</h1>
-    : <div>
-        <h3 className='header'>{title}</h3>
-        <ul className='sidebar-list'>
-          {list.map((item) => (
-
-            ))}
-        </ul>
-      </div>
-}*/

@@ -75,6 +75,6 @@ export function getTeamsArticles (teamId) {
 
 export function getSpecialist () {
   return new Promise((res) => {
-    setTimeout(() => res('Ash Singh 2'), 700)
+    setTimeout(() => res('Ash Singh 2'))
   })
 }
